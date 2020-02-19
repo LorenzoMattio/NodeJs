@@ -24,17 +24,18 @@ objExpress.get("/",function (request,response,next) {
 });
 
 objExpress.get("/visualizza",function (request,response,next) {
-    var ParserJsonRubrica = JSON.parse(moduloFS.readFileSync('Rubrica.json', 'utf-8'))
-    var StringJsonRubrica = JSON.stringify(ParserJsonRubrica)
-    response.send(StringJsonRubrica);
+    var testoFIle = JSON.parse(moduloFS.readFileSync('Rubrica.json', 'utf-8')) // prende la stringa
+    response.send(testoFile);
     console.log("Dati Spediti e  Visualizzati")
 });
 
 
 objExpress.post("/carica",function (request,response,next) {
-    var cognome = request.body.cognome;
+	
+    var cognome = request.body.cognome;		// Prende il parametro in post, è un modulo da importare
     var nome = request.body.nome;
     var telefono = request.body.telefono;
+    
     if (cognome.length != 0 && nome.length !=0 && telefono.length !=0) {
     var ParserJsonRubrica = JSON.parse(moduloFS.readFileSync('Rubrica.json', 'utf-8'))
     ParserJsonRubrica.push({"Nome":nome,"Cognome":cognome,"Telefono":telefono})
@@ -49,8 +50,10 @@ objExpress.post("/carica",function (request,response,next) {
 })
 
 objExpress.post("/elimina",function (request,response,next) {
-    var cognome = request.body.cognome;
+    var cognome = request.body.cognome;		// Prende il parametro in post, è un modulo da importare
+    
     var ParserJsonRubrica = JSON.parse(moduloFS.readFileSync('Rubrica.json', 'utf-8'))
+    
     for (var i=0 ; i < ParserJsonRubrica.length ; i++)
     {
         if (ParserJsonRubrica[i].Cognome == cognome) {
