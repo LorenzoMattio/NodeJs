@@ -24,6 +24,11 @@ app.get("/",function (req,res){
 	res.end();
 });
 
+app.get("/eventi",function (req,res){
+	res.render('./views/index.ejs', {eventi: eventi});
+	console.log("--> Eventi");
+});
+
 
 app.get("/aggiungiPrenotazione",function (req,res){
 	res.write(form);
