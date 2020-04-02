@@ -4,7 +4,7 @@
 
 class Articolo {
 	
-	costructor (articolo, quantita) {
+	constructor (articolo, quantita) {
 		this.nomeArticolo = articolo;
 		this.qta = quantita;
 	}
