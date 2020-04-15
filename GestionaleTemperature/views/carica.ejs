@@ -1,0 +1,57 @@
+<html>
+<head>
+
+  <title>Gestionale temperature</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <h1 class="text-center"> Gestionale Temperature</h1>
+        <br><br>
+      	<form action="/salva" method="post">
+
+          <div class="form-group">
+            <label for="formGroupExampleInput">Città: </label>
+            <select class="form-control form-control-sm" name = "citta">
+              <%for(var i=0;i<arrayCitta.length;i++) {%>
+          		  <option value="<%=arrayCitta[i]%>"><%=arrayCitta[i]%></option>
+          		<% } %>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Zona: </label>
+            <select class="form-control form-control-sm" name = "zona">
+              <option value="NORD">NORD</option>
+        			<option value="CENTRO">CENTRO</option>
+        			<option value="SUD">SUD</option>
+        			<option value="EST">EST</option>
+        			<option value="OVEST">OVEST</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Valore massimo: </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" name="massima">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Valore minimo: </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" name="minima">
+          </div>
+      		<input type="submit" value="salva">
+      	</form>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

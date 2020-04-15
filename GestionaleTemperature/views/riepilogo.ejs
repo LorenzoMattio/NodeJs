@@ -1,0 +1,71 @@
+<html>
+	<head>
+	  <title>Gestionale temperature</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container text-center">
+	    <div class="row">
+	      <div class="col-3"></div>
+	      <div class="col-6">
+	        <h1 class="text-center"> Gestionale Temperature</h1>
+					<br><br>
+	        <div class="text-center">
+	          <a class="btn btn-primary" href="/carica" role="button">Carica dati</a>
+	          <a class="btn btn-primary" href="/" role="button">Home</a>
+	        </div>
+					
+					<p class="font-weight-bolder">
+						Media dei dati disponibili:
+					</p>
+					<p class="font-weight-lighter">
+						<% var medie = stazioni.stampaMediaDati() %>
+						Massima:
+						<%= medie[0]%>
+						<br>
+						Minima:
+						<%= medie[1]%>
+					</p>
+					<!-- IIIIIIIIII -->
+					<p class="font-weight-bolder">
+						Dati disponibili:
+					</p>
+					<p class="font-weight-lighter">
+						<% var dati = stazioni.stampaCittaDati() %>
+						<% for(let i = 0; i < dati.length; i++){
+									%>
+									<%=dati[i]%>
+									<br>
+									<%
+						}%>
+					</p>
+					<!-- IIIIIIIIII -->
+					<p class="font-weight-bolder">
+						Minima assoluta:
+					</p>
+					<p class="font-weight-lighter">
+						<% var min = stazioni.stampaMinimaAssoluta() %>
+						<%=min %>
+					</p>
+					<!-- IIIIIIIIII -->
+					<p class="font-weight-bolder">
+						Massima assoluta:
+					</p>
+					<p class="font-weight-lighter">
+						<% var max = stazioni.stampaMassimaAssoluta() %>
+						<%=max %>
+					</p>
+				</div>
+				<div class="col-3"></div>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>
