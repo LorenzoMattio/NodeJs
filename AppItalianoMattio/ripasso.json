@@ -1,0 +1,131 @@
+[
+{
+
+    "Movimenti":
+        [
+            {
+                "Movimento":"Illuminismo",
+                "Autori":
+                    [
+
+                        { 
+                            "Autore":"Dante",
+                            "Opere":
+                                [
+                                    {
+                                        "Opera":"Divina Commedia",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 1","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 2","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 3","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 1","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 2","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 3","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    },
+                                    {
+                                        "Opera":"Rime",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 4","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 5","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 6","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    }
+                                ]
+                        },
+                        { 
+                            "Autore":"Pirandello",
+                            "Opere":
+                                [
+                                    {
+                                        "Opera":"mattia pascal",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 7","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 8","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 9","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    },
+                                    {
+                                        "Opera":"le novelle",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 10","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 11","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 12","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    }
+                                ]
+                        }
+                    ]
+            },
+            {
+                "Movimento":"decadentismo",
+                "Autori":
+                    [
+
+                        { 
+                            "Autore":"autore1",
+                            "Opere":
+                                [
+                                    {
+                                        "Opera":"1",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 1","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 2","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 3","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    },
+                                    {
+                                        "Opera":"2",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 4","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 5","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 6","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    },
+                                    {
+                                        "Opera":"3",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 1","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 2","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 3","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    }
+                                ]
+                        },
+                        { 
+                            "Autore":"autore2",
+                            "Opere":
+                                [
+                                    {
+                                        "Opera":"mattia pascal",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 7","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 8","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 9","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    },
+                                    {
+                                        "Opera":"le novelle",
+                                        "Brani":
+                                            [
+                                                {"Brano":"Nome brano 10","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 11","testo":"bla bla bla","commento":"ciao ciao cioa"},
+                                                {"Brano":"Nome brano 12","testo":"bla bla bla","commento":"ciao ciao cioa"}
+                                            ]
+                                    }
+                                ]
+                        }
+                    ]
+            }
+        ]
+}
+]
+                                
