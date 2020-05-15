@@ -1,0 +1,29 @@
+<html>
+	<head>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var socket = io.connect('http://127.0.0.1:3000');
+		socket.on("msg1", function(variabile){
+			var oggetto = document.getElementById("contenitore");
+			oggetto.innerHTML = oggetto.innerHTML + "<br>" +variabile;
+		});
+		
+		function invia(){
+			var testo = document.getElementById("messaggio").value;
+			socket.emit("miomessaggio", testo)
+		}
+	</script>
+	
+	</head>
+	<body>
+		<input type="text" id="messaggio">
+		<br>
+		<input type="button" value="invia" onclick="invia()">
+	
+	
+		<div id="contenitore">
+		
+		</div>
+	</body>
+
+</html>

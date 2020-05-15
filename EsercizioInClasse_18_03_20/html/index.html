@@ -1,0 +1,59 @@
+<html>
+	<head>
+	<script src="/socket.io/socket.io.js"></script>
+	
+	<script>
+
+	
+	var socket = io.connect('http://127.0.0.1:3104');
+		
+ 	socket.on('msg', function(data) {
+    		alert(data);
+    		testo=document.querySelector("#testo");
+    		testo.innerHTML=testo.innerHTML + "<br>" + data;
+ 		});
+	
+	function carica(){
+		addbtn=document.querySelector("input[name='addbtn']");
+		addbtn.disabled=true;
+		sottbtn=document.querySelector("input[name='sottbtn']");
+		sottbtn.disabled=true;
+		moltbtn=document.querySelector("input[name='moltbtn']");
+		moltbtn.disabled=true;
+		divbtn=document.querySelector("input[name='divbtn']");
+		divbtn.disabled=true;
+	}
+	function cones(){
+		var nick=document.querySelector("input[name='nick']");
+		var connettiti=document.querySelector("input[name='connettiti']");
+		socket.emit("room",nick.value);
+		connettiti.disabled=true;
+		addbtn.disabled=false;
+		sottbtn.disabled=false;
+		moltbtn.disabled=false;
+		divbtn.disabled=false;
+
+	}
+	function invia(tipo){
+		var num1=document.getElementById('num1').value;
+		var num2=document.getElementById('num2').value;
+		
+		socket.emit("msg",num1,num2,tipo);
+	}
+	</script>
+	</head>
+	<body onload="carica()">
+		<form action="" method="">
+		Nick: <input type="text" name="nick"><br>
+		num1: <input type="number" id="num1"><br>
+		num2: <input type="number" id="num2"><br>
+		<input type="button" onclick="cones()" name="connettiti" value="Connettiti">
+		<input type="button" onclick="invia('add')" name="addbtn" value="Addizione">
+		<input type="button" onclick="invia('sott')" name="sottbtn" value="Sottrazione">
+		<input type="button" onclick="invia('molt')" name="moltbtn" value="Moltiplicazione">
+		<input type="button" onclick="invia('div')" name="divbtn" value="Divisione">
+		</form>
+		
+		<div id="testo"></div>
+	</body>
+</html>
